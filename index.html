@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="particles.js">
+    <link rel="stylesheet" href="app.js">
+    <link rel="stylesheet" href="animate.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <title>Password gen</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script>
+        var keyWord = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var tmp = ''
+
+        function passwordGenerator(plength) {
+            tmp = ''
+            for (i = 0; i < plength; i++) {
+                tmp += keyWord.charAt(Math.floor(Math.random() * keyWord.length))
+            }
+            return tmp
+        }
+
+        function takeValue(lng) {
+
+            document.passwordGen.output.value = passwordGenerator(lng);
+
+        }
+
+    </script>
+
+</head>
+
+<body id="particles-js">
+
+    <div id="particles-js" class="container">
+    <div id="particles-js" class="row"><h1 class="mainTitle animated infinite pulse">Generate a secure password <i class="fa fa-key animated infinite pulse" aria-hidden="true"></i></h1></div>
+    
+    
+        <div id="particles-js" class="row move">
+             <form class="form-group frm" action="#" name="passwordGen">
+                     <h1 class="tle col-sm-12 col-md-6 text-muted  btn-lg  btn-primary btn-lg"><strong>Password length</strong></h1>
+                    <input class="col-sm-12 col-md-6 btn  btn-lg  bt btn-lg" type="text" name="length" value="8">
+                      <input class="col-sm-12 col-md-6 btn btn-success btn-lg  bt btn-lg" type="button" name="pass" value="Generate Password " onclick="takeValue (this.form.length.value)"> 
+                    <input  class="col-sm-12 col-md-6 btn  btn-lg  bt btn-lg"  type="text" name="output" size="">
+                </form>
+        </div>
+      
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+
+</body>
+
+</html>
